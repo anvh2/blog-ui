@@ -1,0 +1,24 @@
+.post-author{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.post-author-desc {
+    margin-left: 12px;
+    width: 100%;
+    display: block;
+}
+
+.post-author-name {
+    font-weight: 400;
+}
+
+.post-author-time {
+    color: rgba(0, 0, 0, 0.54);
+    fill: rgba(0, 0, 0, 0.54);
+    letter-spacing: 0;
+    font-size: 15px;
+    line-height: 20px;
+    font-family: medium-content-sans-serif-font, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+}
