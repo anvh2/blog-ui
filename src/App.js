@@ -15,26 +15,46 @@ import PageHeader from './components/header/PageHeader';
 import AboutPage from './containers/blog/about';
 import Contact from './containers/blog/contact';
 import HomePage from './containers/blog/home';
+import PostPage from './containers/blog/post'
+import EditorPage from './containers/blog/editor';
+import EditorHeader from './components/header/EditorHeader';
 
 function App() {
   return (
     <div>
       <NavBar />
-      <PageHeader />
       <Router>
         <Switch>
+          <Route path="/editor">
+            <EditorHeader />
+            <EditorPage />
+            <Footer />
+          </Route>
+          <Route path="/post">
+            <PageHeader />
+            <PostPage />
+            <Footer />
+          </Route>
           <Route path="/about">
+            <PageHeader />
             <AboutPage />
+            <Footer />
           </Route>
           <Route path="/contact">
+            <PageHeader />
             <Contact />
+            <Footer />
+          </Route>
+          <Route path="/login">
+            <p>Login page</p>
           </Route>
           <Route path="/">
+            <PageHeader />
             <HomePage />
+            <Footer />
           </Route>
         </Switch>
       </Router>
-      <Footer />
     </div>
   );
 }

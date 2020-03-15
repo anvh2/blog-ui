@@ -1,8 +1,8 @@
 import React from "react"
 import { connect } from 'react-redux';
 
-function PageHeader(props) {
-    const { background, header, sub } = props;
+function PostHeader(props) {
+    const { background, header, sub, author, time } = props;
 
     return (
         <header className="masthead" style={{ backgroundImage: `url(${background})` }}>
@@ -10,9 +10,13 @@ function PageHeader(props) {
             <div className="container">
                 <div className="row">
                     <div className="col-lg-8 col-md-10 mx-auto">
-                        <div className="page-heading">
+                        <div className="post-heading">
                             <h1>{header}</h1>
-                            <span className="subheading">{sub}</span>
+                            <h2 className="subheading">{sub}</h2>
+                            <span className="meta">Posted by
+                                <a href="#">{author}</a>
+                                {time}
+                            </span>
                         </div>
                     </div>
                 </div>
@@ -26,7 +30,9 @@ const mapStateToProps = state => {
         background: state.headerBg,
         header: state.headerTitle,
         sub: state.headerSub,
+        author: state.postAuhtor,
+        time: state.postedTime
     }
 }
 
-export default connect(mapStateToProps)(PageHeader)
+export default connect(mapStateToProps)(PostHeader)

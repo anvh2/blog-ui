@@ -1,24 +1,146 @@
-.post-author{
-    display: flex;
-    justify-content: right;
-    align-items: center;
+.post-author {
+  display: flex;
+  justify-content: right;
+  align-items: center;
 }
 
 .post-author-desc {
-    margin-left: 12px;
-    width: 100%;
-    display: block;
+  margin-left: 12px;
+  width: 100%;
+  display: block;
 }
 
 .post-author-name {
-    font-weight: 400;
+  font-weight: 400;
 }
 
 .post-author-time {
-    color: rgba(0, 0, 0, 0.54);
-    fill: rgba(0, 0, 0, 0.54);
-    letter-spacing: 0;
-    font-size: 15px;
-    line-height: 20px;
-    font-family: medium-content-sans-serif-font, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+  color: rgba(0, 0, 0, 0.54);
+  fill: rgba(0, 0, 0, 0.54);
+  letter-spacing: 0;
+  font-size: 15px;
+  line-height: 20px;
+  font-family: medium-content-sans-serif-font, "Lucida Grande",
+    "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+}
+
+.post-author-time a {
+  color: rgba(0, 0, 0, 0.54);
+  fill: rgba(0, 0, 0, 0.54);
+}
+
+.post-preview-thumnail {
+  position: relative;
+}
+
+.post-preview-thumnail img {
+  width: 100%;
+  height: auto;
+}
+
+.post-preview-info-container {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+  width: 100%;
+}
+
+.submit-button {
+  border-radius: 4px;
+  background-color: #252725;
+  border: none;
+  color: #ffffff;
+  text-align: center;
+  font-size: 14px;
+  padding: 10px;
+  width: 100px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  float: right;
+}
+
+.submit-button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.submit-button span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.submit-button:hover span {
+  padding-right: 25px;
+}
+
+.submit-button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.upload-btn-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.btn {
+  border: 2px solid gray;
+  color: gray;
+  /* background-color: white; */
+  padding: 8px 20px;
+  border-radius: 8px;
+  font-size: 10px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.upload-btn-wrapper input[type="file"] {
+  font-size: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+
+.editor-class {
+  height: 700px !important;
+  border: 1px solid #f1f1f1;
+  margin-bottom: 5px;
+}
+
+.content-html {
+  width: 100% !important;
+  height: 500px !important;
+}
+
+.post-heading textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  text-align: center;
+  color: white;
+  border: none;
+  background-color: transparent;
+  font-family: medium-content-sans-serif-font, "Lucida Grande",
+    "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+}
+
+.post-heading .header {
+  height: 100px;
+  display: block;
+  font-size: 55px;
+  font-weight: bold;
+}
+
+.post-heading .subtitle {
+  height: 60px;
+  display: block;
+  font-size: 30px;
 }

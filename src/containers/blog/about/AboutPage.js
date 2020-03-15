@@ -10,26 +10,26 @@ function AboutPage(props) {
     console.log(typeof background)
 
     return (
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-md-10 mx-auto">
-                    <div class="post-author">
+        <div className="container">
+            <div className="row">
+                <div className="col-lg-8 col-md-10 mx-auto">
+                    <div className="post-author">
                         <UserAvatar size="65" name="Hoang An" />
-                        <div class="post-author-desc">
-                            <div class="post-author-name">Hoàng An</div>
-                            <div class="post-author-time">
+                        <div className="post-author-desc">
+                            <div className="post-author-name">Hoang An</div>
+                            <div className="post-author-time">
                                 Feb 29, 2020 . 1 min read
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-8 col-md-10 mx-auto">
+            <div className="row">
+                <div className="col-lg-8 col-md-10 mx-auto">
                     <p>Hi All,</p>
                     <p>
-                        I'm An - a Developer live in HCMC, Vietnam. I'm studying for a Bachelor of Infomation Technology at the University of Science HCM.
-                        Now I'm working at VNG as a Backend Associate Engineer and trying to become a full-stack developer in the near future. </p>
+                        I'm An - live in HCMC, Vietnam. I'm studying for a Bachelor of Infomation Technology at the University of Science HCM and
+                        now working at VNG.</p>
                     <p>
                         My purpose for building this website in order to store the knowledge that I have learned and shared it with those who care about it.
                         Please note that this website is under development, so let send to my email <a href="mailto: anvo.ht209@gmail.com">anvo.ht209@gmail.com</a> if you have any suggestions or discorver errors.
@@ -45,10 +45,10 @@ const mapState = state => {
     return {}
 }
 
-const mapDispath = dispatch => {
+const mapDispatch = dispatch => {
     return {
-        loadHeader: (background, head, sub) => dispatch(action.handleMenuClick(background, head, sub))
+        loadHeader: (background, head, sub) => dispatch(action.loadHeader(background, head, sub))
     }
 }
 
-export default connect(mapState, mapDispath)(AboutPage)
+export default connect(mapState, mapDispatch)(AboutPage)
